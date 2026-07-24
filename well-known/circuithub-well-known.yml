@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: https://auth.circuithub.com/.well-known/openid-configuration
+notes: >-
+  CircuitHub publishes no public developer API. Its web application
+  (app.circuithub.com) authenticates users through an Auth0-hosted OpenID
+  Connect tenant at auth.circuithub.com, which exposes a standard OIDC
+  discovery document. The marketing/app hosts return 404 for security.txt.
+hosts:
+  - host: https://auth.circuithub.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: circuithub-openid-configuration.json
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://circuithub.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404

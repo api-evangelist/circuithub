@@ -1,8 +1,17 @@
 aid: circuithub
 name: CircuitHub
-description: CircuitHub is a company surfaced as a portfolio company of a16z, gv, y-combinator and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  CircuitHub is an on-demand electronics manufacturing platform that provides
+  rapid, low-cost turnkey PCB (printed circuit board) assembly for hardware and
+  robotics teams. Engineers upload their CAD and BOM files (Altium, EAGLE,
+  KiCAD) to an automated web application that reconciles the bill of materials
+  against 35,000+ stocked common parts, generates an instant quote, previews a
+  virtual build, and manufactures small prototype-to-production batches in the
+  USA — with 81% of full turnkey orders shipping within three days and
+  real-time quality metrics for transparency. CircuitHub has delivered over 1.5
+  million boards and placed 87 million parts for more than 20,000 engineers.
+  The company operates a web application rather than a public developer API;
+  user authentication is handled through an Auth0-hosted OpenID Connect tenant.
 url: https://raw.githubusercontent.com/api-evangelist/circuithub/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +21,31 @@ x-backed-by:
 - y-combinator
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://circuithub.com/favicon.ico
 tags:
 - Company
+- Electronics Manufacturing
+- PCB Assembly
+- Hardware
+- Robotics
+- Manufacturing
+- Prototyping
+- Supply Chain
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,4 +54,33 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://circuithub.com
+  url: https://circuithub.com
+- type: Blog
+  url: https://circuithub.com/blog
+- type: Pricing
+  url: https://circuithub.com/pricing
+- type: HelpCenter
+  url: https://docs.circuithub.com/
+- type: SignUp
+  url: https://app.circuithub.com/signup
+- type: Login
+  url: https://app.circuithub.com/login
+- type: TermsOfService
+  url: https://circuithub.com/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://circuithub.com/legal/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/circuithub
+- type: WellKnown
+  url: well-known/circuithub-well-known.yml
+- type: Authentication
+  url: authentication/circuithub-authentication.yml
+- type: Conformance
+  url: conformance/circuithub-conformance.yml
+- type: DomainSecurity
+  url: security/circuithub-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

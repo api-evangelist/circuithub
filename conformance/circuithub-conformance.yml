@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+source: https://auth.circuithub.com/.well-known/openid-configuration
+notes: >-
+  Conformance derived from CircuitHub's Auth0-hosted OpenID Connect tenant
+  discovery document. CircuitHub publishes no public developer API, so no
+  application-level (FHIR/SCIM/OData/JSON:API/RFC9457) conformance can be
+  asserted.
+standards:
+  - id: oidc
+    conforms: true
+    evidence: >-
+      auth.circuithub.com publishes an OpenID Connect discovery document at
+      /.well-known/openid-configuration with issuer, authorization/token/userinfo
+      endpoints and a jwks_uri.
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      OIDC tenant advertises OAuth 2.0 authorization_code, client_credentials,
+      refresh_token, and device_code grant types with S256 PKCE.
+  - id: pkce-rfc7636
+    conforms: true
+    evidence: code_challenge_methods_supported includes S256.
+  - id: oauth2-device-flow-rfc8628
+    conforms: true
+    evidence: device_authorization_endpoint present; device_code grant supported.
+  - id: oauth2-dpop-rfc9449
+    conforms: true
+    evidence: dpop_signing_alg_values_supported includes ES256.
+  - id: rfc9457-problem-details
+    conforms: false
+  - id: fhir-r4
+    conforms: false
+  - id: scim2
+    conforms: false
