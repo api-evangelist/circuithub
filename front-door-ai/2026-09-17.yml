@@ -1,0 +1,26 @@
+# Front Door AI Index — circuithub — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: circuithub
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: circuithub.com
+  final_host: www.circuithub.com
+  ownership: own
+  owner: circuithub
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 2
+  host_score: 2
+  density: 0.95
+  words: 2096
+  tiers:
+    agentic: 2
+    core: 0
+    model: 0
+  ambiguous: 2
+  top_terms:
+    automation: 2
+    prompts: 2
